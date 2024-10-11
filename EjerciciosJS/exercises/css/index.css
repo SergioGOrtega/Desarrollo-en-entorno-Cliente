@@ -1,0 +1,117 @@
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+footer i {
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .35);
+    transition: .3s ease;
+}
+
+.bi-github:hover {
+    background-color: #333333;
+    color: white;
+    box-shadow: 0 0 15px #333333,
+                0 0 35px #333333,
+                0 0 65px #333333,
+                0 0 95px #333333;
+}
+
+.bi-linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+    box-shadow: 0 0 15px #0077b5,
+                0 0 35px #0077b5,
+                0 0 65px #0077b5,
+                0 0 95px #0077b5;
+}
+
+
+/* MY CLASSES */
+
+.text-justify {
+    text-align: justify;
+}
+
+.vh-85 {
+    height: 85vh;
+}
+
+.vh-90 {
+    height: 90vh;
+}
+
+.bg-myBlue {
+    background-color: #095d9f;
+}
+
+.border-blue {
+    border-left: 3px solid #0089fc;
+}
+
+.dropdown-item {
+    transition: 0.35s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #d4f6ff !important;
+}
+
+.dropdown-item:active {
+    background-color: #0089fc !important;
+}
+
+#sergioProfile {
+    transition: 0.3s ease;
+}
+
+#sergioProfile:hover {
+    transform: scale(105%);
+}
+
+/* RESPONSIVITY */
+
+@media only screen and (max-width: 576px) {
+
+    .mt-only-sm-5 {
+        margin-top: 3rem;
+    }
+
+}
