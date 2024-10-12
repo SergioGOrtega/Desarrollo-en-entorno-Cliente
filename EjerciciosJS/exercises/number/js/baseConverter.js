@@ -44,6 +44,4 @@ function baseConverter() {
 
 }
 
-window.onload = () => {
-    baseConverter();
-}
+baseConverter();

@@ -48,6 +48,4 @@ function login() {
 
 }
 
-window.onload = () => {
-    login();
-}
+login();

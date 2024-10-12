@@ -68,6 +68,4 @@ function calculateContent(content) {
 
 }
 
-window.onload = () => {
-    calculator();
-}
+calculator();

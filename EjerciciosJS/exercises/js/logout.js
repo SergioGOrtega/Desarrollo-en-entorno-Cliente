@@ -8,6 +8,4 @@ function logout() {
 
 }
 
-window.onload = () => {
-    logout();
-}
+logout();
