@@ -7,7 +7,7 @@ function login() {
     
     const loginForm = document.getElementById("loginForm");
 
-    if(getCookie("loggedIn") === "true") {
+    if(getLocalStorage("loggedIn") === "true") {
         window.location.href = "./exercises/index.html";
     }
 
@@ -26,7 +26,7 @@ function login() {
             errorMessage = "The username must have at least 3 characters!";
         } else if((usernameValue === STORAGED_USERNAME) && (passwordValue === STORAGED_PASSWORD)) {
             isValid = true;
-            setCookie("loggedIn", "true", 1);
+            setLocalStorage("loggedIn", "true");
         } else {
             errorMessage = "Incorrect username and/or password!";
         }

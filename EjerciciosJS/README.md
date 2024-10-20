@@ -2,8 +2,14 @@
 
 <h2>Contents:</h2>
 <ul>
-  <li>Login with Cookies</li>
+  <li>Login with Local Storage</li>
   <li>Template ready to add exercises</li>
+</ul>
+
+<h2>Exercises added:</h2>
+<ul>
+  <li>NUMBER</li>
+  <li>STRING</li>
 </ul>
 
 <h3>Explanation:</h3>

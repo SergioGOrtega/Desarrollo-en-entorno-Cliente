@@ -3,7 +3,7 @@
 function logout() {
 
     document.getElementById("logoutButton").addEventListener("click", () => {
-        eraseCookie("loggedIn");
+        eraseLocalStorage("loggedIn");
     });
 
 }
