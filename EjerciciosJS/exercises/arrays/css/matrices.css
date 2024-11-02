@@ -1,0 +1,29 @@
+td {
+    min-width: 25px;
+}
+
+/* RESPONSIVITY */
+
+@media only screen and (max-width: 800px) {
+
+    form {
+        width: 85% !important;
+    }
+
+    .btn-outline-primary {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (width >= 900px) {
+
+    .container {
+        text-align: center;
+    }
+
+    .container div {
+        display: inline-block;
+    }
+
+}

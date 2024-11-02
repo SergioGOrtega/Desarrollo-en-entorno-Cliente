@@ -54,6 +54,8 @@ lowerCaseConsonantsButton.addEventListener("click", lowerCaseConsonants);
 
 randomButton.addEventListener("click", () => {
 
+    clearInterval(interval);
+
     interval = setInterval(() => {
         getRandomFunction()();
     }, 500);

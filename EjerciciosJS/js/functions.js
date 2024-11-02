@@ -6,7 +6,6 @@ function validation(message, isSuccess) {
     const formInputs = document.querySelectorAll(".form-control");
 
     loginMessage.innerHTML = message;
-
     loginMessage.classList.remove("d-none", "valid-feedback", "invalid-feedback");
 
     if(isSuccess) {
@@ -29,12 +28,12 @@ function resetErrors() {
     
     const loginMessage = document.getElementById("loginMessage");
     const formInputs = document.querySelectorAll(".form-control");
-
+    
     formInputs.forEach((formInput) => {
-
+        
         formInput.addEventListener("change", () => {
-            formInput.classList.remove("border-danger");
             loginMessage.classList.remove("d-block");
+            formInput.classList.remove("border-danger");
         });
         
     });

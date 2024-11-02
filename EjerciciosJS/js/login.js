@@ -1,17 +1,23 @@
 "use strict";
 
-function login() {
+async function checkLoginStatus() {
+
+    if((await getIndexedDb("loggedIn")) === "true") {
+        window.location.href = "./exercises/home.html";
+    }
+
+}
+
+async function login() {
 
     const STORAGED_USERNAME = "Sergio";
     const STORAGED_PASSWORD = "hola123";
     
     const loginForm = document.getElementById("loginForm");
 
-    if(getLocalStorage("loggedIn") === "true") {
-        window.location.href = "./exercises/index.html";
-    }
+    await checkLoginStatus();
 
-    loginForm.addEventListener("submit", (event) => {
+    loginForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const usernameValue = document.getElementById("usernameInput").value;
@@ -26,7 +32,7 @@ function login() {
             errorMessage = "The username must have at least 3 characters!";
         } else if((usernameValue === STORAGED_USERNAME) && (passwordValue === STORAGED_PASSWORD)) {
             isValid = true;
-            setLocalStorage("loggedIn", "true");
+            await setIndexedDb("loggedIn", "true");
         } else {
             errorMessage = "Incorrect username and/or password!";
         }
@@ -36,7 +42,7 @@ function login() {
             validation("Logged successfully!", true);
 
             setTimeout(() => {
-                window.location.href = "./exercises/index.html";
+                window.location.href = "./exercises/home.html";
             }, 2000);
 
         } else {

@@ -2,8 +2,8 @@
 
 function logout() {
 
-    document.getElementById("logoutButton").addEventListener("click", () => {
-        eraseLocalStorage("loggedIn");
+    document.getElementById("logoutButton").addEventListener("click", async () => {
+        await deleteIndexedDb("loggedIn");
     });
 
 }
