@@ -11,6 +11,7 @@
   <li>NUMBER</li>
   <li>STRING</li>
   <li>ARRAYS</li>
+  <li>CRUDS</li>
 </ul>
 
 <h3>Explanation:</h3>

@@ -1,0 +1,38 @@
+/* MY CLASSES */
+
+.w-35 {
+    width: 35%;
+}
+
+img {
+    width: 75%;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table td:not([class="buttons-container"]) {
+    width: 25% !important;
+    vertical-align: middle;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* RESPONSIVITY */
+
+@media only screen and (max-width: 800px) {
+
+    form {
+        width: 90% !important;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+
+}
