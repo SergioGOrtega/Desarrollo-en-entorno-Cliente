@@ -12,6 +12,7 @@
   <li>STRING</li>
   <li>ARRAYS</li>
   <li>CRUDS</li>
+  <li>STRUCTURES</li>
 </ul>
 
 <h3>Explanation:</h3>

@@ -1,0 +1,27 @@
+/* MY CLASSES */
+
+.w-35 {
+    width: 35%;
+}
+
+#garments-div div:nth-child(odd) {
+    background: lightgray;
+}
+
+#cars-div div:nth-child(odd) {
+    background: lightgray;
+}
+
+/* RESPONSIVITY */
+
+@media only screen and (max-width: 800px) {
+
+    .w-35 {
+        width: 85% !important;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+
+}

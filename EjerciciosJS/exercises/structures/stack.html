@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD SESSION STORAGE - JS</title>
+    <title>Stack - JS</title>
     <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="./css/cruds.css">
+    <link rel="stylesheet" href="./css/structures.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="module" src="./js/modules/random.js"></script>
+    <script type="module" src="./js/classes/List.js"></script>
+    <script type="module" src="./js/classes/Stack.js"></script>
+    <script type="module" src="./js/modules/scriptStack.js"></script>
+    <script type="module" src="./js/stackMain.js"></script>
     <script defer src="../../js/indexedDB.js"></script>
     <script defer src="../js/logout.js"></script>
-    <script defer src="./js/sessionStorage.js"></script>
-    <script defer src="./js/sessionStorageScript.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
@@ -69,10 +72,10 @@
                             Cruds
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./cookies.html">Cookies</a></li>
-                            <li><a class="dropdown-item active" href="#">SessionStorage</a></li>
-                            <li><a class="dropdown-item" href="./localStorage.html">LocalStorage</a></li>
-                            <li><a class="dropdown-item" href="./indexedDB.html">IndexedDB</a></li>
+                            <li><a class="dropdown-item" href="../cruds/cookies.html">Cookies</a></li>
+                            <li><a class="dropdown-item" href="../cruds/sessionStorage.html">SessionStorage</a></li>
+                            <li><a class="dropdown-item" href="../cruds/localStorage.html">LocalStorage</a></li>
+                            <li><a class="dropdown-item" href="../cruds/indexedDB.html">IndexedDB</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -81,9 +84,9 @@
                             Structures
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="../structures/stack.html">Stack</a></li>
-                            <li><a class="dropdown-item" href="../structures/queue.html">Queue</a></li>
-                            <li><a class="dropdown-item" href="../structures/list.html">List</a></li>
+                            <li><a class="dropdown-item active" href="#">Stack</a></li>
+                            <li><a class="dropdown-item" href="./queue.html">Queue</a></li>
+                            <li><a class="dropdown-item" href="./list.html">List</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -102,29 +105,16 @@
         
         <form class="w-35 border border-1 rounded-4 p-5 mt-5 mb-5" method="get">
             
-            <h3 class="text-primary mb-5 text-center">CRUD SESSION STORAGE</h3>
+            <h3 class="text-primary mb-5 text-center">Laundry management with a Stack</h3>
 
             <div class="text-center">
-                <label for="name" class="form-label me-1">Name:</label>
-                <input type="text" class="form-control w-25 d-inline-block me-3" id="name">
-
-                <label for="value" class="form-label me-1 mt-3">Value:</label>
-                <input type="text" class="form-control w-25 d-inline-block" id="value">
-
-                <button class="btn btn-primary mb-1 ms-3" id="save">Save</button>
+                <button type="button" class="btn btn-primary" id="insert-button">Insert garment</button>
+                <button type="button" class="btn btn-danger" id="remove-button">Remove garment</button>
             </div>
 
-            <div class="d-flex justify-content-center align-items-center">
-                <table class="table table-striped mt-5">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Value</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+            <div class="mt-4">
+                <div class="d-none text-center" id="garments-div"></div>
+                <div class="d-none mt-3" id="info"></div>
             </div>
 
         </form>
